@@ -56,4 +56,15 @@
       </md-expansion-panel>
     </md-accordion>
   </md-card>
+  
+  <md-card>
+    <md-card-header>
+      <h1>Datepicker</h1>
+    </md-card-header>
+    <md-input-container>
+      <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
+      <button mdSuffix [mdDatepickerToggle]="picker"></button>
+    </md-input-container>
+    <md-datepicker #picker></md-datepicker>
+  </md-card>
 </div>
