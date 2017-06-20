@@ -6,3 +6,7 @@ $my-typography: mat-typography-config(
 );
 
 @include angular-material-typography($my-typography);
+
+.my-selector {
+  font-size: mat-font-size($my-typography, headline);
+}
