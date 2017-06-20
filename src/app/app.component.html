@@ -3,8 +3,9 @@
 </md-toolbar>
 <div fxLayout="row">
   <md-card>
-    <md-card-header>Typography</md-card-header>
-
+    <md-card-header>
+      <h1>Typography</h1>
+    </md-card-header>
     <h1>This is unstyled</h1>
     <h1 class="mat-headline">This is styled</h1>
     <button md-button>yo</button>
@@ -13,5 +14,46 @@
       <h1>This is styled better!</h1>
       <button md-button>yo</button>
     </section>
+  </md-card>
+  <md-card>
+    <md-card-header>
+      <h1>Expansion Panel</h1>
+    </md-card-header>
+    <md-expansion-panel #myPanel>
+      <md-expansion-panel-header>
+        <md-panel-title>Title</md-panel-title>
+        <md-panel-description>Descdesc</md-panel-description>
+      </md-expansion-panel-header>
+      Content
+      <md-action-row>
+        <button md-button (click)="myPanel.close()">cancel</button>
+        <button md-button color="primary" class="mat-raised-button">save</button>
+      </md-action-row>
+    </md-expansion-panel>
+
+    <md-accordion>
+      <md-expansion-panel #myPanel1>
+        <md-expansion-panel-header>
+          <md-panel-title>Title</md-panel-title>
+          <md-panel-description>Descdesc</md-panel-description>
+        </md-expansion-panel-header>
+        Content
+        <md-action-row>
+          <button md-button (click)="myPanel1.close()">cancel</button>
+          <button md-button color="primary" class="mat-raised-button">save</button>
+        </md-action-row>
+      </md-expansion-panel>
+      <md-expansion-panel #myPanel2>
+        <md-expansion-panel-header>
+          <md-panel-title>Title</md-panel-title>
+          <md-panel-description>Looooooooooooong Description</md-panel-description>
+        </md-expansion-panel-header>
+        Content
+        <md-action-row>
+          <button md-button (click)="myPanel2.close()">cancel</button>
+          <button md-button color="primary" class="mat-raised-button">save</button>
+        </md-action-row>
+      </md-expansion-panel>
+    </md-accordion>
   </md-card>
 </div>
